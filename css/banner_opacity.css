@@ -1,0 +1,71 @@
+@charset "utf-8";
+.banner {
+	position: relative;
+	margin: 20px auto;
+	width: 1200px;
+	height: 600px;
+	text-align: center;
+	overflow: hidden;
+}
+.slides {
+	position: relative;
+	width: 2000px;
+}
+.slides li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	list-style: none;
+}
+.slides li:first-child {
+	opacity: 1;
+	z-index: 2;
+}
+.icon-prev,
+.icon-next {
+	position: absolute;
+	display: block;
+	width: 42px;
+	height: 70px;
+	background: url(../images/icon_slides.png) no-repeat;
+	cursor: pointer;
+}
+.icon-prev {
+	top: 45%;
+	left: 10px;
+	background-position: 0 0;
+	z-index: 999;
+}
+.icon-next {
+	top: 45%;
+	right: 10px;
+	background-position: -42px 0;
+	z-index: 999;
+}
+/*轮播球居中生效是display：line-block和width：100%， text-align：center才有效*/
+.slide-controls {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	z-index: 999;
+}
+.slide-controls li {
+	display: inline-block;  
+	cursor: pointer;
+	overflow: hidden;
+}
+.slide-controls span {
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: #ffffff;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+		    border-radius: 5px;
+
+}
+.slide-controls .sel span {
+	background-color: #ff0000;
+}
